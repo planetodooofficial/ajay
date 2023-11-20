@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record id="view_stock_valuation_layer_revaluation_form"
+		model="ir.ui.view">
+		<field name="name">stock.valuation.layer.revaluation.form.inherit
+		</field>
+		<field name="model">stock.valuation.layer.revaluation</field>
+		<field name="priority">100</field>
+		<field name="inherit_id"
+			ref="stock_account.stock_valuation_layer_revaluation_form_view" />
+		<field name="arch" type="xml">
+			<field name="date" position="after">
+				<field name="cost_level" invisible="1" />
+
+				<field name="lot_id" domain="[('product_id','=',product_id)]"
+					attrs="{'required': [('cost_level','=','lot')],'invisible':[('cost_level','!=','lot')]}" />
+			</field>
+		</field>
+	</record>
+
+</odoo>
