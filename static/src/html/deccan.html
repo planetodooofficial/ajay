@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@450;700;900&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet"
+        href="https://unpkg.com/bs-brain@2.0.4/components/navbars/navbar-1/assets/css/navbar-1.css" />
+    <link rel="stylesheet" href="./carafewerk.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="icon" href="/carafewerk/static/src/images/cropped-favicon-32x32.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+
+    <title>Deccan | Carafewerk</title>
+    <style>
+        .container2 {
+            width: 100%;
+            margin-top: 10px;
+            padding: 20px;
+        }
+
+        .breadcrumb {
+            color: #7a7a7a;
+            font-family: "Merriweather", Sans-serif;
+            font-size: 16px;
+            font-weight: 200;
+            line-height: 1.7em;
+        }
+
+        .breadcrumb a {
+            color: #7a7a7a;
+            text-decoration: none;
+        }
+
+        .breadcrumb span {
+            color: #7a7a7a;
+        }
+
+        .product {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .product-images {
+            flex: 1;
+            width: 30%;
+            margin-top: -100px;
+
+        }
+
+        .product-images img {
+            width: 100%;
+        }
+
+        .thumbnails {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .thumbnails img {
+            width: 200px;
+            height: 150px;
+            cursor: pointer;
+        }
+
+        .product-details {
+            flex: 0.9;
+            width: 100%;
+        }
+
+        .product-details h1 {
+            color: var(--e-global-color-text);
+            font-family: "Raleway", Sans-serif;
+            font-size: 60px;
+            font-weight: 400;
+            margin-top: 30px;
+        }
+
+        .description {
+            font-family: "Merriweather", Sans-serif;
+            font-size: 16px;
+            font-weight: 200;
+            line-height: 1.7em;
+            margin-top: 50px;
+        }
+
+        .price {
+            font-size: 24px;
+            color: #000;
+            margin-bottom: 10px;
+            margin-top: 30px;
+        }
+
+        .original-price {
+            text-decoration: line-through;
+            color: #888;
+            margin-right: 10px;
+        }
+
+        .set-of-two {
+            margin-bottom: 20px;
+            text-align: left;
+            color: #000;
+            font-weight: bold;
+        }
+
+        .color-selection {
+            margin-bottom: 20px;
+            width: 50%;
+        }
+
+        .color-selection label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .color-selection select {
+            padding: 5px;
+            width: 100%;
+        }
+
+        .quantity {
+            margin-bottom: 20px;
+        }
+
+        .quantity input {
+            width: 50px;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .add-to-basket {
+            background-color: grey;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .add-to-basket:hover {
+            background-color: #FCAE17;
+        }
+
+        .set-of-two-note {
+            margin-top: 10px;
+            color: #777;
+        }
+
+        .product-images img {
+            animation: slideIn 1s forwards;
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateX(25%);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .tabs {
+            margin-left: -5px;
+        }
+
+        .tabs ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 5px;
+            display: flex;
+            margin-top: 20px;
+            border-bottom: 3px solid hsla(0, 0%, 50.2%, .5019607843);
+            margin-right: 10px;
+        }
+
+        .tabs ul li {
+            margin-right: 0;
+        }
+
+        .tabs ul li a {
+            text-decoration: none;
+            display: block;
+            border: 1px solid #ccc;
+            border-radius: 2px;
+            color: black;
+            padding: .8em 1.2em;
+            line-height: 1;
+            font-size: 16px;
+            font-weight: 800;
+        }
+
+        .tab-content {
+            display: none;
+            margin-top: 10px;
+            font-family: 'Raleway', Sans-serif;
+            line-height: 1.2;
+        }
+
+        .tab-content h2 {
+            color: #000;
+            font-size: 32px;
+            font-weight: bolder;
+        }
+
+        .tab-content p {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .tabs .active {
+            background-color: #eaf0f5;
+        }
+
+        /* Table styles */
+        table {
+            font-size: .9em;
+            border-spacing: 0;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        tr {
+            display: table-row;
+            vertical-align: inherit;
+            unicode-bidi: isolate;
+            border-color: inherit;
+        }
+
+        td {
+            font-style: italic;
+            padding: 0;
+            border-top: 0;
+            border-bottom: 1px dotted rgba(0, 0, 0, .1);
+            margin: 0;
+            line-height: 1.5;
+            border-right: 1px solid hsla(0, 0%, 50.2%, .5019607843);
+
+        }
+
+        th {
+            width: 150px;
+            font-weight: 700;
+            padding: 8px;
+            border-top: 0;
+            border-bottom: 1px dotted rgba(0, 0, 0, .1);
+            margin: 0;
+            line-height: 1.5;
+            border-left: 1px solid hsla(0, 0%, 50.2%, .5019607843);
+            border-right: 1px solid hsla(0, 0%, 50.2%, .5019607843);
+        }
+
+        tr:nth-child(odd)>th {
+            background-color: hsla(0, 0%, 50.2%, .0705882353);
+        }
+
+        tr:nth-child(odd)>td {
+            background-color: hsla(0, 0%, 50.2%, .0705882353);
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            margin-left: -25px;
+        }
+
+        .feature {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .feature h5 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        #main-image {
+            transition: opacity 0.3s;
+        }
+
+        #main-image:hover {
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md bg-black" style="height: 110px">
+            <div class="container" style="margin-left: 25px;">
+                <a class="navbar-brand" href="./index.html">
+                    <img src="/carafewerk/static/src/images/logo.png" alt="Logo" width="220" />
+                </a>
+                <div style="margin-right: -190px;">
+                    <div class="offcanvas-body" style="overflow: hidden">
+                        <ul class="navbar-nav justify-content-end flex-grow-1">
+                            <li class="nav-item px-2">
+                                <a class="nav-link active text-white" aria-current="page" href="./index.html">Cha.i</a>
+                            </li>
+                            <li class="nav-item px-2">
+                                <a class="nav-link active text-white" aria-current="page"
+                                    href="./essentials.html">Essentials</a>
+                            </li>
+                            <li class="nav-item px-2">
+                                <a class="nav-link active text-white" aria-current="page"
+                                    href="./teastory.html">TeaStorys</a>
+                            </li>
+                            <li class="nav-item px-2">
+                                <a class="nav-link active text-white" aria-current="page" href="./about.html">About
+                                    Us</a>
+                            </li>
+                            <li class="nav-item px-2">
+                                <a class="nav-link active text-white" aria-current="page"
+                                    href="https://www.flickr.com/photos/194494258@N08/">Gallery</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <div class="container2">
+            <div class="product">
+                <div class="product-images" style="opacity: 1; transition: opacity 0.25s ease-in-out 0s;">
+                    <img src="/carafewerk/static/src/images/deccan/Deccan-Black-Front-min.png" alt="Kuro Mug" id="main-image">
+                    <div class="thumbnails">
+                        <img src="/carafewerk/static/src/images/deccan/Deccan-Black-Front-min.png" alt="Matte Blue" data-color="black"
+                            draggable="false">
+                        <img src="/carafewerk/static/src/images/deccan/Deccan-Dark-Blue-Front-min-2.png" alt="Dark Blue"
+                            data-color="midnight_blue" draggable="false">
+                        <img src="/carafewerk/static/src/images/deccan/Deccan-Light-Blue-Front-min.png" alt="Light Blue" data-color="teal"
+                            draggable="false">
+                    </div>
+                </div>
+                <div class="product-details" style="font-family: 'Merriweather', Sans-serif;">
+                    <nav class="breadcrumb">
+                        <a href="./index.html">Home</a> /
+                        <a href="./essentials.html">Essentials</a> /
+                        <a href="./essentials.html">Handcrafted mugs</a> /
+                        <span style="font-weight: bold;">Deccan</span>
+                    </nav>
+                    <h1 style="font-weight: bolder;">Deccan</h1>
+                    <p class="description">Why be conventional? Hey, even the earth is slightly tilted, right – and that
+                        is what gives us our seasons. We carry forward that tilt to Deccan– and this mug is perfect for
+                        all the seasons.</p>
+                    <p class="price"><span class="original-price">₹1,200.00</span><span
+                            style="text-decoration: underline;">₹950.00</span></p>
+                    <p class="set-of-two">(Set of two)</p>
+                    <div class="color-selection">
+                        <label for="color">Colour</label>
+                        <select id="color">
+                            <option value="">Choose an option</option>
+                            <option value="black">Black</option>
+                            <option value="midnight_blue">Midnight Blue</option>
+                            <option value="teal">Teal</option>
+                        </select>
+                    </div>
+                    <div class="quantity">
+                        <input type="number" id="quantity" value="1"
+                            oninput="validity.valid||(value=''); if(value<0)value=0;">
+                        <p class="set-of-two" style="margin-top:10px ;">(Set of two)</p>
+                    </div>
+                    <button class="add-to-basket">Add to basket</button>
+                    <div class="tabs">
+                        <ul>
+                            <li><a href="#tab-description" class="tab-link active"
+                                    style="border-right: none;">Description</a></li>
+                            <li><a href="#tab-additional_information" class="tab-link"
+                                    style="border-left: none;">Additional information</a></li>
+                        </ul>
+                    </div>
+                    <div id="tab-description" class="tab-content" style="display: block;">
+                        <h2>Description</h2>
+                        <p><em>Material: Glazed Stoneware Ceramic</em></p>
+                        <p><em>Capacity: 200 ml</em></p>
+                        <p><em>Stoneware ceramic, glazed and fired to 1200 C</em></p>
+                        <p><em>Safety: Food grade, lead-free glaze, microwave and oven safe</em></p>
+                        <p style="font-weight: 400;"><em>Care: Dishwasher safe (recommended to wash by hand for extended
+                                life)</em></p>
+                        <p
+                            style="font-size: 15px;font-family: 'Raleway', Sans-serif;margin-top: 50px;  font-weight: 900;">
+                            Shipping:</p>
+                        <p style="font-weight: 400;">Delivery within 2 – 8 business days depending on location</p>
+                        <p style="font-weight: 400;">Eligible for returns within 7 days of delivery;</p>
+                    </div>
+                    <div id="tab-additional_information" class="tab-content">
+                        <h2>Additional Information</h2>
+                        <table>
+                            <tr>
+                                <th>Dimensions</th>
+                                <td>10.9 × 7.8 × 6.7 cm</td>
+                            </tr>
+                            <tr>
+                                <th>Color</th>
+                                <td>Black, Midnight Blue, Teal</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function () {
+                            // Display the default tab content ("Description")
+                            showTab('tab-description');
+                        });
+
+                        const tabLinks = document.querySelectorAll('.tab-link');
+
+                        function showTab(tabId) {
+                            // Hide all tab contents
+                            var tabContents = document.getElementsByClassName('tab-content');
+                            for (var i = 0; i < tabContents.length; i++) {
+                                tabContents[i].style.display = 'none';
+                            }
+
+                            // Show the selected tab content
+                            var selectedTab = document.getElementById(tabId);
+                            if (selectedTab) {
+                                selectedTab.style.display = 'block';
+                            }
+
+                            // Remove active class from all tab links
+                            tabLinks.forEach(link => link.classList.remove('active'));
+
+                            // Add active class to the clicked tab link
+                            document.querySelector(`a[href="#${tabId}"]`).classList.add('active');
+                        }
+
+                        tabLinks.forEach(link => {
+                            link.addEventListener('click', function (e) {
+                                e.preventDefault(); // Prevent default anchor tag behavior
+                                showTab(this.getAttribute('href').slice(1)); // Get tab ID from href attribute
+                            });
+                        });
+                    </script>
+                    <div class="features">
+                        <div class="feature">
+                            <img src="/carafewerk/static/src/images/food.png" alt="Food Grade Cups">
+                            <h5>Food Grade Cups</h5>
+                        </div>
+                        <div class="feature">
+                            <img src="/carafewerk/static/src/images/microwave.png" alt="Microwave oven safe">
+                            <h5>Microwave oven safe</h5>
+                        </div>
+                        <div class="feature">
+                            <img src="/carafewerk/static/src/images/dish.png" alt="Dishwasher safe**">
+                            <h5>Dishwasher safe**</h5>
+                        </div>
+                        <div class="feature">
+                            <img src="/carafewerk/static/src/images/lead.png" alt="Lead free glaze">
+                            <h5>Lead free glaze</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const mainImage = document.getElementById('main-image');
+            const thumbnails = document.querySelectorAll('.thumbnails img');
+            const colorSelect = document.getElementById('color');
+
+            const images = {
+                black: '/carafewerk/static/src/images/deccan/Deccan-Black-Front-min.png',
+                midnight_blue: '/carafewerk/static/src/images/deccan/Deccan-Dark-Blue-Front-min-2.png',
+                teal: '/carafewerk/static/src/images/deccan/Deccan-Light-Blue-Front-min.png'
+            };
+
+            // Function to change the main image with animation
+            function changeImage(newSrc) {
+                mainImage.style.animation = 'none';
+                setTimeout(() => {
+                    mainImage.src = newSrc;
+                    mainImage.style.animation = 'slideIn 1s forwards';
+
+                }, 100);
+            }
+
+            thumbnails.forEach(thumbnail => {
+                thumbnail.addEventListener('click', () => {
+                    const color = thumbnail.getAttribute('data-color');
+                    const newSrc = images[color];
+                    changeImage(newSrc);
+                    colorSelect.value = color;
+                });
+            });
+
+            colorSelect.addEventListener('change', () => {
+                const selectedColor = colorSelect.value;
+                if (images[selectedColor]) {
+                    const newSrc = images[selectedColor];
+                    changeImage(newSrc);
+                }
+            });
+        </script>
+    </section>
+    <footer style="font-family:'Raleway', Sans-serif;background-color: #ffffff;">
+        <section
+            style="display: flex;justify-content: space-between; height: 250px;  align-items: center; background-color: #ffffff;">
+            <div style="font-size: 48px;text-align: start;padding-left: 30px;">
+                Get in touch <b><span style="color: #000;">today!</span></b>
+            </div>
+
+            <div
+                style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start; width: 45%;padding-right: 100px;gap:5px;margin-top: 15px;">
+                <input type="text" placeholder="Name: First Last"
+                    style="margin: 5px ; padding: 5px; width: 100%;  box-sizing: border-box;border: none;border-bottom: 1px solid black;">
+                <input type="text" placeholder="Mobile: +91-XXXXXXXXXX"
+                    style="margin: 5px ; padding: 5px; width: 100%; box-sizing: border-box;border: none;border-bottom: 1px solid black;">
+                <input type="text" placeholder="Your City"
+                    style="margin: 5px ; padding: 5px; width: 100%; box-sizing: border-box;border: none;border-bottom: 1px solid black;">
+                <input type="email" placeholder="yourname@email.com"
+                    style="margin: 5px ; padding: 5px; width: 100%; box-sizing: border-box;border: none;border-bottom: 1px solid black;">
+                <button
+                    style="margin-top: 10px; padding: 8px 70px; background-color:#fcae17; border: 1px solid black; border-radius: 10px; font-size: 15px; font-weight: bold; cursor: pointer; display: flex; justify-content: center; align-items: center; transition: transform 0.3s ease;"
+                    onmouseover="this.style.transform='scale(0.9)';this.style.color='white';"
+                    onmouseout="this.style.transform='scale(1)';this.style.color='black';">
+                    Send <span style="margin-left: 10px;" class="fas fa-coffee"></span>
+                </button>
+        </section>
+
+        <section
+            style="position: relative;background-image: url('/carafewerk/static/src/images/Mask-Group-1.png'); background-size: cover; background-position: bottom center; color: #fff; text-align: center; padding: 106px 140px;margin-top: 30px;height: 100px;">
+            <div
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 1;">
+            </div>
+            <div
+                style="position: relative; z-index: 2; height: 100%; display: flex; align-items: center; justify-content: space-between; padding: 0 20px;">
+                <a href="./essentials.html" style="text-decoration: none;">
+                    <h1 style="font-size: 45px; margin: 20px; color: #ffcc00;">Browse Essentials</h1>
+                </a>
+                <p style="font-size: 20px; margin-right: -60px;">The best tea tastes even better with the best teacups!
+                </p>
+            </div>
+        </section>
+
+        <div
+            style="display: flex; justify-content: space-around; height: 295px; background-color: #000; color: #fff; padding: 40px 30px;">
+            <div style="flex: 1; margin: 0 20px; text-align: center;margin-top: 20px;">
+                <a href="./index.html"><img src="/carafewerk/static/src/images/logo.png" alt="Logo" width="250" height="25"></a>
+            </div>
+            <div style="flex: 1; margin: 0 20px;">
+                <h5 style="font-weight: bolder;">Products</h5>
+                <ul style="list-style: none; padding: 10px 0;">
+                    <li style="margin: 10px 0;"><a href="./index.html"
+                            style="color: #ffcc00; text-decoration: none;">Chai</a>
+                    </li>
+                    <li style="margin: 10px 0;"><a href="./essentials.html"
+                            style="color: #ffcc00; text-decoration: none;">Essentials</a></li>
+                </ul>
+            </div>
+            <div style="flex: 1; margin: 0 20px;">
+                <h5 style="font-weight: bolder;">Company</h5>
+                <ul style="list-style: none; padding: 10px 0;">
+                    <li style="margin: 10px 0;"><a href="./about.html"
+                            style="color: #ffcc00; text-decoration: none;">About Us</a>
+                    </li>
+                    <li style="margin: 10px 0;"><a href="./contact.html"
+                            style="color: #ffcc00; text-decoration: none;">Contact
+                            Us</a></li>
+                </ul>
+            </div>
+            <div style="flex: 1; margin: 0 20px;">
+                <h5 style="font-weight: bolder;">Help</h5>
+                <ul style="list-style: none; padding: 10px 0;">
+                    <li style="margin: 10px 0;"><a href="./return-policy.html"
+                            style="color: #ffcc00; text-decoration: none;">Return Policy</a></li>
+                    <li style="margin: 10px 0;"><a href="./shpipping-policy.html"
+                            style="color: #ffcc00; text-decoration: none;">Shipping Policy</a>
+                    </li>
+                    <li style="margin: 10px 0;"><a href="./payment-terms.html"
+                            style="color: #ffcc00; text-decoration: none;">Payment Terms</a></li>
+                    <li style="margin: 10px 0;"><a href="./terms-and-conditions.html"
+                            style="color: #ffcc00; text-decoration: none;">Terms and
+                            Conditions</a></li>
+                </ul>
+            </div>
+            <div style="flex: 1; margin: 0 20px;">
+                <h5 style="font-weight: bolder;">Follow Us!</h5>
+                <div style="display: flex; gap: 30px; margin-top:40px; margin-left: 20px;">
+                    <a href="https://www.facebook.com/carafewerk/
+                    " target="_blank" style="color: #ffcc00; font-size: 24px; text-decoration: none;"><i
+                            class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/carafewerk/
+                    " target="_blank" style="color: #ffcc00; font-size: 24px; text-decoration: none;"><i
+                            class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div style="font-size: 12px; text-align: center; padding: 10px; background-color: #000; color: #fff;">
+            ©Carafewerk 2023. We love our users! All Rights Reserved. Design by: <span
+                style="font-family: 'Montserrat', Sans-serif;font-size: 12px;font-weight: 800;">Vint Media</span>
+        </div>
+    </footer>
+
+</body>
+
+</html>
