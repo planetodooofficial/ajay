@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@450&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet"
+        href="https://unpkg.com/bs-brain@2.0.4/components/navbars/navbar-1/assets/css/navbar-1.css" />
+    <link rel="stylesheet" href="./carafewerk.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="icon" href="/carafewerk/static/src/images/cropped-favicon-32x32.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+    <title>Tales from the tea trade | TeaStorys | Carafewerk</title>
+    <style>
+        .container2 {
+
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(5, auto);
+            margin-left: 25px;
+        }
+
+        .item {
+            font-family: "Montserrat", Sans-serif;
+            display: flex;
+            flex-direction: column;
+            width: 402px;
+        }
+
+        .image-wrapper {
+            font-family: "Montserrat", Sans-serif;
+            width: 100%;
+            height: 280px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .content {
+            flex-grow: 1;
+        }
+
+        .content h5 {
+            margin: 10px 0;
+        }
+
+        .read-more {
+            color: orange;
+            font-weight: bold;
+            font-size: 12px;
+            margin-top: 35px;
+        }
+
+        .content h2 {
+            font-family: "Montserrat", Sans-serif;
+            font-size: 16px;
+            font-weight: 300;
+            margin-top: 20px;
+        }
+
+        .content p {
+            font-family: "Montserrat", Sans-serif;
+            font-size: 14px;
+            font-weight: 300;
+            margin-top: 15px;
+            height: 80px;
+
+
+        }
+
+        .content a {
+            text-decoration: none;
+
+        }
+
+        .pagination {
+            margin-top: 20px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .pagination button {
+            margin: 0 5px;
+            padding: 8px 12px;
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            color: gray;
+        }
+
+        .pagination button:hover {
+            color: black;
+        }
+
+        .pagination .pageButton.currentPage {
+            color: orange;
+
+        }
+
+        .pagination .pageButton:disabled {
+            opacity: 0.6;
+            cursor: default;
+        }
+
+        .image-wrapper .tag {
+            font-family: 'Raleway', Sans-serif;
+            position: absolute;
+            margin-left: 280px;
+            margin-top: 30px;
+            background-color: orange;
+            line-height: 1;
+            color: white;
+            padding: .6em 1.2em;
+            font-size: 12px;
+            font-weight: 500;
+            border-radius: 999px;
+        }
+
+
+        @media (max-width: 1200px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md bg-black" style="height: 110px">
+            <div class="container" style="margin-left: 25px">
+                <a class="navbar-brand" href="./index.html">
+                    <img src="/carafewerk/static/src/images/logo.png" alt="Logo" width="220" />
+                </a>
+                <div style="margin-right: -190px">
+                    <div class="offcanvas-body" style="overflow: hidden">
+                        <ul class="navbar-nav justify-content-end flex-grow-1">
+                            <li class="nav-item px-2">
+                                <a class="nav-link active text-white" aria-current="page" href="./index.html">Cha.i</a>
+                            </li>
+                            <li class="nav-item px-2">
+                                <a class="nav-link active text-white" aria-current="page"
+                                    href="./essentials.html">Essentials</a>
+                            </li>
+                            <li class="nav-item px-2">
+                                <a class="nav-link active text-white" aria-current="page"
+                                    href="./teastory.html">TeaStorys</a>
+                            </li>
+                            <li class="nav-item px-2">
+                                <a class="nav-link active text-white" aria-current="page" href="./about.html">About
+                                    Us</a>
+                            </li>
+                            <li class="nav-item px-2">
+                                <a class="nav-link active text-white" aria-current="page"
+                                    href="https://www.flickr.com/photos/194494258@N08/">Gallery</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="d-flex align-items-center"
+        style="background-image: url('/carafewerk/static/src/images/Vetal_Sunrise_07-2.jpg');background-size: cover;background-position: center center;height: 103vh;color: white;position: relative;">
+        <div style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;background-color: rgba(0, 0, 0, 0.5);">
+        </div>
+        <div
+            style="position: relative;font-family: 'Raleway', Sans-serif;display: flex;flex-direction: column;margin-left: 30px;line-height: 2;">
+            <h1 class="display-4" style="font-size: 84px; font-weight: 400">
+                TeaStorys
+            </h1>
+            <p style="text-align: left;font-family: 'Raleway', Sans-serif;font-size: 42.5px;font-weight: 400;">
+                Tales from the tea trade
+            </p>
+        </div>
+    </section>
+    <section class="container2">
+        <div class="item">
+            <a href="./a-writers-brew.html" style="color: black" target="_blank">
+                <div class="image-wrapper">
+                    <div class="tag">BLACK TEA</div>
+                    <img src="/carafewerk/static/src/images/Assam-tea-garden-morning-plucking-e1602566256197.jpg" alt="A writer’s brew">
+                </div>
+                <div class="content">
+                    <h2>A writer’s brew</h2>
+                    <p>Dr. Bhupen Hazarika, the Brahmaputra, Bihu dance and Assam. There are things that naturally
+                        belong to
+                        each other. Tea and Dr. Pradip Baruah are similarly</p>
+                    <a class="read-more">READ MORE ></a>
+                    <hr style="border: 1px solid black;">
+                    <p>14/10/2020</p>
+                </div>
+            </a>
+        </div>
+        <div class="item">
+            <div class="image-wrapper">
+                <div class="tag">AYURVEDA</div>
+                <img src="/carafewerk/static/src/images/gs4.png" alt="Tea meets Technology">
+            </div>
+            <div class="content">
+                <h2>Tea meets Technology</h2>
+                <p>Can the caffeine content of a cup of tea match that of a coffee one? Can there be a single factory to
+                    process tea for</p>
+                <a href="#" class="read-more">READ MORE ></a>
+                <hr style="border: 1px solid black;">
+                <p>26/05/2020</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="image-wrapper">
+                <div class="tag">BLACK TEA</div>
+                <img src="/carafewerk/static/src/images/Social_distance_tea2.jpeg" alt="Silver Linings">
+            </div>
+            <div class="content">
+                <h2>Silver Linings</h2>
+                <p>“There is a crack in everything That’s how the light gets in” ~ Leonard Cohen This week we travel to
+                    Kerala – virtually, of course. We</p>
+                <a href="#" class="read-more">READ MORE ></a>
+                <hr style="border: 1px solid black;">
+                <p>18/04/2020</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="image-wrapper">
+                <div class="tag">AYURVEDA</div>
+                <img src="/carafewerk/static/src/images/lockhart-bungalow-1536x887.jpg" alt="Pause. Hit Refresh.">
+            </div>
+            <div class="content">
+                <h2>Pause. Hit Refresh.</h2>
+                <p>The world suddenly pressed Pause. Humans retreated and other species found it safe to reclaim their
+                    portion of Earth. This precipitous withdrawal of humans to</p>
+                <a href="#" class="read-more">READ MORE ></a>
+                <hr style="border: 1px solid black;">
+                <p>10/04/2020</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="image-wrapper">
+                <div class="tag">BLACK TEA</div>
+                <img src="/carafewerk/static/src/images/Lockhart-near-Gap-2.jpg" alt="The classroom at 6500 feet">
+            </div>
+            <div class="content">
+                <h2>The classroom at 6500 feet</h2>
+                <p>What if writing about tea was your hobby but you had never had a peep inside a tea processing
+                    factory? Well, we suffered from just</p>
+                <a href="#" class="read-more">READ MORE ></a>
+                <hr style="border: 1px solid black;">
+                <p>31/07/2019</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="image-wrapper">
+                <div class="tag">BLACK TEA</div>
+                <img src="/carafewerk/static/src/images/fb-tenzelephant.jpg" alt="Tea for Tusker">
+            </div>
+            <div class="content">
+                <h2>Tea for Tusker</h2>
+                <p>Have a cup of tea. Save an elephant. That is what Tenzing Bodosa’s farm would like to achieve.
+                    Pondicherry is smallest district in India at</p>
+                <a href="#" class="read-more">READ MORE ></a>
+                <hr style="border: 1px solid black;">
+                <p>19/07/2019</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="image-wrapper">
+                <div class="tag">BLENDERS</div>
+                <img src="/carafewerk/static/src/images/TEAM_TBM_23_Rechthoek-1536x1024.jpg" alt="Let’s go Dutch on tea">
+            </div>
+            <div class="content">
+                <h2>Let’s go Dutch on tea</h2>
+                <p>Zundert is a small town in south Netherlands, population 22,000. The birthplace of Vincent Van Gogh,
+                    it lies in a province that is one of</p>
+                <a href="#" class="read-more">READ MORE ></a>
+                <hr style="border: 1px solid black;">
+                <p>28/06/2019</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="image-wrapper">
+                <div class="tag">BLACK TEA</div>
+                <img src="/carafewerk/static/src/images/IMG_2991-1536x1152.jpg" alt="Wild tea and Forest trails">
+            </div>
+            <div class="content">
+                <h2>Wild tea and Forest trails</h2>
+                <p>We have all seen photographs of tea plantations. Primly groomed row upon row of tea bushes. Each
+                    bush, neat and tidy, pruned to about waist</p>
+                <a href="#" class="read-more">READ MORE ></a>
+                <hr style="border: 1px solid black;">
+                <p>31/05/2019</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="image-wrapper">
+                <div class="tag">BLACK TEA</div>
+                <img src="/carafewerk/static/src/images/At-the-garden.jpg" alt="The Kolkata Boys evoke Nostealgia">
+            </div>
+            <div class="content">
+                <h2>The Kolkata Boys evoke Nostealgia</h2>
+                <p>It must be the air of Darjeeling. How else do you explain the change in plans of Souvik Nandy and
+                    Tathagata Samanta? Two Economics undergrads</p>
+                <a href="#" class="read-more">READ MORE ></a>
+                <hr style="border: 1px solid black;">
+                <p>02/05/2019</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="image-wrapper">
+                <div class="tag">ACCESSORIES</div>
+                <img src="/carafewerk/static/src/images/cups-e1550124001720-1536x470.jpg" alt="The Kolkata Boys evoke Nostealgia">
+            </div>
+            <div class="content">
+                <h2>Of journeys – The potter and clay</h2>
+                <p>Winter chill in the air and the afternoon sun on your face. A cup of steaming hot adrak chai
+                    completes the picture. We are sipping</p>
+                <a href="#" class="read-more">READ MORE ></a>
+                <hr style="border: 1px solid black;">
+                <p>14/02/2019</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="image-wrapper">
+                <div class="tag">BLENDERS</div>
+                <img src="/carafewerk/static/src/images/Harvesting-lemongrass-1536x1152.jpg" alt="This Dweller resides in your cup">
+            </div>
+            <div class="content">
+                <h2>This Dweller resides in your cup</h2>
+                <p>The year just going by – 2018 – witnessed a young startup taking shape in the form of Dweller Teas.
+                    Eli Yambem’s brainchild, Dweller is</p>
+                <a href="#" class="read-more">READ MORE ></a>
+                <hr style="border: 1px solid black;">
+                <p>04/01/2019</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="image-wrapper">
+                <div class="tag">GREEN TEA</div>
+                <img src="/carafewerk/static/src/images/Brew-in-Assam-1-1536x1152.jpg" alt="What’s brewing in Assam…">
+            </div>
+            <div class="content">
+                <h2>What’s brewing in Assam…</h2>
+                <p>It’s been roughly two and a half years since I’ve moved back from Singapore to Assam. From one of the
+                    fastest moving countries to a</p>
+                <a href="#" class="read-more">READ MORE ></a>
+                <hr style="border: 1px solid black;">
+                <p>20/04/2018</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="image-wrapper">
+                <div class="tag">BLENDERS</div>
+                <img src="/carafewerk/static/src/images/Snigdha-cover-1536x1024.jpg" alt="The rebel with a big heart">
+            </div>
+            <div class="content">
+                <h2>The rebel with a big heart</h2>
+                <p>A start-up that knuckled down on becoming profitable quickly. A founder that refuses to take venture
+                    capital even when the funders come calling. A founder</p>
+                <a href="#" class="read-more">READ MORE ></a>
+                <hr style="border: 1px solid black;">
+                <p>13/10/2017</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="image-wrapper">
+                <div class="tag">BLENDERS</div>
+                <img src="/carafewerk/static/src/images/Anamika-001-1536x768.jpg" alt="Tea in the Himachal">
+            </div>
+            <div class="content">
+                <h2>Tea in the Himachal</h2>
+                <p>What if you have always wanted to have a cup of tea that smelt like rose, tasted like vanilla and
+                    looked like a whiskey. This</p>
+                <a href="#" class="read-more">READ MORE ></a>
+                <hr style="border: 1px solid black;">
+                <p>10/08/2017</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="image-wrapper">
+                <div class="tag">GREEN TEA</div>
+                <img src="/carafewerk/static/src/images/CT-Garden.jpg" alt="Of Midori and Chota Tingrai Hara Green Tea Factory">
+            </div>
+            <div class="content">
+                <h2>Of Midori and Chota Tingrai Hara Green Tea Factory</h2>
+                <p style="height: 60px;">Midori. Authentic matcha instant green tea. That’s the latest retail brand to
+                    come out of Chota Tingrai, Avantika and Mrityunjay Jalan’s tea bagan. If anything</p>
+                <a href="#" class="read-more">READ MORE ></a>
+                <hr style="border: 1px solid black;">
+                <p>21/04/2017</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="image-wrapper">
+                <div class="tag">TRAVEL</div>
+                <img src="/carafewerk/static/src/images/1200px-Jeff_Fuchs-Ancient_Tea_Horse_Road.jpg" alt="The Tea Horse Road">
+            </div>
+            <div class="content">
+                <h2>The Tea Horse Road</h2>
+                <p>In the high altitude Tibetan plateau, even mild activity leads to exhaustion. With an average
+                    elevation of 14,000 feet, the daily hustle on the plateau</p>
+                <a href="#" class="read-more">READ MORE ></a>
+                <hr style="border: 1px solid black;">
+                <p>06/04/2017</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="image-wrapper">
+                <div class="tag">BLENDERS</div>
+                <img src="/carafewerk/static/src/images/Landing-page-final-1536x768.jpg" alt="The Tea Horse Road">
+            </div>
+            <div class="content">
+                <h2>What are the odds?</h2>
+                <p>What are the odds? Of two boys from Mumbai who never crossed paths growing up and moved overseas for
+                    their education and jobs, teaming up to</p>
+                <a href="#" class="read-more">READ MORE ></a>
+                <hr style="border: 1px solid black;">
+                <p>02/03/2017</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="image-wrapper">
+                <div class="tag">BLENDERS</div>
+                <img src="/carafewerk/static/src/images/Leader-1-1536x768.jpg"
+                    alt="Where passion is the culture – Tea Culture of the World">
+            </div>
+            <div class="content">
+                <h2>Where passion is the culture – Tea Culture of the World</h2>
+                <p>Rupali Ambegaonkar is busy. On her mind is a new training plan for her sales team. Then there is this
+                    large order from an exclusive</p>
+                <a href="#" class="read-more">READ MORE ></a>
+                <hr style="border: 1px solid black;">
+                <p>09/02/2017</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="image-wrapper">
+                <div class="tag">CAFE</div>
+                <img src="/carafewerk/static/src/images/Black-Tea-2-1536x1053.jpg" alt="6 Entrepreneur tips from the Tea Trails Team">
+            </div>
+            <div class="content">
+                <h2>6 Entrepreneur tips from the Tea Trails Team</h2>
+                <p>A trail is often an unpaved lane. Used by mountain bikers to test their skills or by walkers to
+                    explore the unknown. For the Mathurs,</p>
+                <a href="#" class="read-more">READ MORE ></a>
+                <hr style="border: 1px solid black;">
+                <p>20/01/2017</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="image-wrapper">
+                <div class="tag">BLACK TEA</div>
+                <img src="/carafewerk/static/src/images/oit-01-e1483352242233.jpg" alt="Christmas Tea Party">
+            </div>
+            <div class="content">
+                <h2>Christmas Tea Party</h2>
+                <p>If you are looking to spice up your Christmas party, Orange spiced iced tea may just be the drink to
+                    set it off on the right</p>
+                <a href="#" class="read-more">READ MORE ></a>
+                <hr style="border: 1px solid black;">
+                <p>23/12/2016</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="image-wrapper">
+                <div class="tag">CAFE</div>
+                <img src="/carafewerk/static/src/images/chaichautees1-1536x568.jpg" alt="Christmas Tea Party">
+            </div>
+            <div class="content">
+                <h2>Christmas Tea Party</h2>
+                <p>It is a crowded evening at Chai34. Groups of youngsters come up to the counter, place their orders of
+                    Chai and take a seat on</p>
+                <a href="#" class="read-more">READ MORE ></a>
+                <hr style="border: 1px solid black;">
+                <p>16/12/2016</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="image-wrapper">
+                <div class="tag">CAFE</div>
+                <img src="/carafewerk/static/src/images/bubble-teas-e1483357977247.jpg" alt="Christmas Tea Party">
+            </div>
+            <div class="content">
+                <h2>Pop goes the Bubble</h2>
+                <p>You might spot Adnan Sarkar taking long slow strolls around his hotel at Hill Road in Bandra. He gets
+                    most of his ideas during these</p>
+                <a href="#" class="read-more">READ MORE ></a>
+                <hr style="border: 1px solid black;">
+                <p>09/12/2016</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="image-wrapper">
+                <div class="tag">CAFE</div>
+                <img src="/carafewerk/static/src/images/irani-cups-e1483352621117.jpg" alt="Cafe Irani Chaii and the Badgir of Bombay">
+            </div>
+            <div class="content">
+                <h2>Cafe Irani Chaii and the Badgir of Bombay</h2>
+                <p>The suburb of Mahim in Mumbai is slowly rousing itself. An unseasonal bout of cold has meant a lazy
+                    start to the day. In this</p>
+                <a href="#" class="read-more">READ MORE ></a>
+                <hr style="border: 1px solid black;">
+                <p>18/11/2016</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="image-wrapper">
+                <div class="tag">BLENDERS</div>
+                <img src="/carafewerk/static/src/images/dsc_7010-e1483352691832.jpg" alt="Cafe Irani Chaii and the Badgir of Bombay">
+            </div>
+            <div class="content">
+                <h2>Healing people, one cup at a time</h2>
+                <p>Oh, you just cannot have the same cup of tea at different times during the day. This is a
+                    conversation we are having with Akshi Khandelwal</p>
+                <a href="#" class="read-more">READ MORE ></a>
+                <hr style="border: 1px solid black;">
+                <p>08/11/2016</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="image-wrapper">
+                <div class="tag">GREEN TEA</div>
+                <img src="/carafewerk/static/src/images/masala-tea-2.jpg" alt="From Poland, with love">
+            </div>
+            <div class="content">
+                <h2>From Poland, with love</h2>
+                <p> Monika Gorzna is from Poland. The country conjures images of winter and cold, of medieval castles
+                    and lakes, of gruff men and difficult to pronounce</p>
+                <a href="#" class="read-more">READ MORE ></a>
+                <hr style="border: 1px solid black;">
+                <p>28/10/2016</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="image-wrapper">
+                <div class="tag">MASALA TEA</div>
+                <img src="/carafewerk/static/src/images/masala-chai-e1483352761816.jpg" alt="Of Chef Rajendra Dhuri, his Dadi and Chai">
+            </div>
+            <div class="content">
+                <h2>Of Chef Rajendra Dhuri, his Dadi and Chai</h2>
+                <p> At his Kandivali home in Mumbai, the alarm is always set for 4 am. Before it rings, Chef Rajendra
+                    Dhuri is out of bed. Fifty minutes</p>
+                <a href="#" class="read-more">READ MORE ></a>
+                <hr style="border: 1px solid black;">
+                <p>21/10/2016</p>
+            </div>
+        </div>
+
+
+    </section>
+    <div class="pagination">
+        <!-- Pagination buttons will be generated here -->
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const itemsPerPage = 15; // Number of items to show per page
+            let currentPage = localStorage.getItem('currentPage') ? parseInt(localStorage.getItem('currentPage')) : 1; // Current page tracker
+
+            const items = document.querySelectorAll('.container2 .item');
+            const container = document.querySelector('.container2'); // Select the container of the items
+
+            const numPages = Math.ceil(items.length / itemsPerPage); // Calculate total number of pages
+
+            function showItems(page) {
+                const startIndex = (page - 1) * itemsPerPage;
+                const endIndex = startIndex + itemsPerPage;
+
+                items.forEach((item, index) => {
+                    if (index >= startIndex && index < endIndex) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            }
+
+            function createPaginationButtons() {
+                const paginationContainer = document.querySelector('.pagination');
+
+                // Remove any existing pagination buttons
+                paginationContainer.innerHTML = '';
+
+                // Create numbered buttons for each page
+                for (let i = 1; i <= numPages; i++) {
+                    const button = document.createElement('button');
+                    button.textContent = i;
+                    button.classList.add('pageButton');
+                    if (i == 1) {
+                        button.classList.add('currentPage');
+                    }
+                    button.addEventListener('click', function () {
+                        goToPage(i);
+                    });
+
+                    paginationContainer.appendChild(button);
+                }
+            }
+
+            function goToPage(page) {
+                currentPage = page;
+                showItems(currentPage);
+
+                // Scroll to the top of the container
+                container.scrollIntoView({ behavior: 'smooth' });
+
+                // Highlight the current page button
+                document.querySelectorAll('.pagination .pageButton').forEach(button => {
+                    button.classList.remove('currentPage');
+                    if (parseInt(button.textContent) === currentPage) {
+                        button.classList.add('currentPage');
+                    }
+                });
+            }
+
+            // Initial page load
+            showItems(currentPage);
+            createPaginationButtons();
+        });
+    </script>
+
+    <footer style="font-family:'Raleway', Sans-serif;background-color: #ffffff;">
+        <section
+            style="display: flex;justify-content: space-between; height: 250px;  align-items: center; background-color: #ffffff;">
+            <div style="font-size: 48px;text-align: start;padding-left: 30px;">
+                Get in touch <b><span style="color: #000;">today!</span></b>
+            </div>
+
+            <div
+                style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start; width: 45%;padding-right: 100px;gap:5px;margin-top: 15px;">
+                <input type="text" placeholder="Name: First Last"
+                    style="margin: 5px ; padding: 5px; width: 100%;  box-sizing: border-box;border: none;border-bottom: 1px solid black;">
+                <input type="text" placeholder="Mobile: +91-XXXXXXXXXX"
+                    style="margin: 5px ; padding: 5px; width: 100%; box-sizing: border-box;border: none;border-bottom: 1px solid black;">
+                <input type="text" placeholder="Your City"
+                    style="margin: 5px ; padding: 5px; width: 100%; box-sizing: border-box;border: none;border-bottom: 1px solid black;">
+                <input type="email" placeholder="yourname@email.com"
+                    style="margin: 5px ; padding: 5px; width: 100%; box-sizing: border-box;border: none;border-bottom: 1px solid black;">
+                <button
+                    style="margin-top: 10px; padding: 8px 70px; background-color:#fcae17; border: 1px solid black; border-radius: 10px; font-size: 15px; font-weight: bold; cursor: pointer; display: flex; justify-content: center; align-items: center; transition: transform 0.3s ease;"
+                    onmouseover="this.style.transform='scale(0.9)';this.style.color='white';"
+                    onmouseout="this.style.transform='scale(1)';this.style.color='black';">
+                    Send <span style="margin-left: 10px;" class="fas fa-coffee"></span>
+                </button>
+            </div>
+        </section>
+
+        <section
+            style="position: relative;background-image: url('/carafewerk/static/src/images/Mask-Group-1.png'); background-size: cover; background-position: bottom center; color: #fff; text-align: center; padding: 106px 140px;margin-top: 30px;height: 100px;">
+            <div
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 1;">
+            </div>
+            <div
+                style="position: relative; z-index: 2; height: 100%; display: flex; align-items: center; justify-content: space-between; padding: 0 20px;">
+                <a href="./essentials.html" style="text-decoration: none;">
+                    <h1 style="font-size: 45px; margin: 20px; color: #ffcc00;">Browse Essentials</h1>
+                </a>
+                <p style="font-size: 20px; margin-right: -60px;">The best tea tastes even better with the best teacups!
+                </p>
+            </div>
+        </section>
+
+        <div
+            style="display: flex; justify-content: space-around; height: 295px; background-color: #000; color: #fff; padding: 40px 30px;">
+            <div style="flex: 1; margin: 0 20px; text-align: center;margin-top: 20px;">
+                <a href="./index.html"><img src="/carafewerk/static/src/images/logo.png" alt="Logo" width="250" height="25"></a>
+            </div>
+            <div style="flex: 1; margin: 0 20px;">
+                <h5 style="font-weight: bolder;">Products</h5>
+                <ul style="list-style: none; padding: 10px 0;">
+                    <li style="margin: 10px 0;"><a href="./index.html"
+                            style="color: #ffcc00; text-decoration: none;">Chai</a>
+                    </li>
+                    <li style="margin: 10px 0;"><a href="./essentials.html"
+                            style="color: #ffcc00; text-decoration: none;">Essentials</a></li>
+                </ul>
+            </div>
+            <div style="flex: 1; margin: 0 20px;">
+                <h5 style="font-weight: bolder;">Company</h5>
+                <ul style="list-style: none; padding: 10px 0;">
+                    <li style="margin: 10px 0;"><a href="./about.html"
+                            style="color: #ffcc00; text-decoration: none;">About Us</a>
+                    </li>
+                    <li style="margin: 10px 0;"><a href="./contact.html"
+                            style="color: #ffcc00; text-decoration: none;">Contact
+                            Us</a></li>
+                </ul>
+            </div>
+            <div style="flex: 1; margin: 0 20px;">
+                <h5 style="font-weight: bolder;">Help</h5>
+                <ul style="list-style: none; padding: 10px 0;">
+                    <li style="margin: 10px 0;"><a href="./return-policy.html"
+                            style="color: #ffcc00; text-decoration: none;">Return Policy</a></li>
+                    <li style="margin: 10px 0;"><a href="./shpipping-policy.html"
+                            style="color: #ffcc00; text-decoration: none;">Shipping Policy</a>
+                    </li>
+                    <li style="margin: 10px 0;"><a href="./payment-terms.html"
+                            style="color: #ffcc00; text-decoration: none;">Payment Terms</a></li>
+                    <li style="margin: 10px 0;"><a href="./terms-and-conditions.html"
+                            style="color: #ffcc00; text-decoration: none;">Terms and
+                            Conditions</a></li>
+                </ul>
+            </div>
+            <div style="flex: 1; margin: 0 20px;">
+                <h5 style="font-weight: bolder;">Follow Us!</h5>
+                <div style="display: flex; gap: 30px; margin-top:40px; margin-left: 20px;">
+                    <a href="https://www.facebook.com/carafewerk/
+                    " target="_blank" style="color: #ffcc00; font-size: 24px; text-decoration: none;"><i
+                            class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/carafewerk/" target="_blank"
+                        style="color: #ffcc00; font-size: 24px; text-decoration: none;"><i
+                            class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div style="font-size: 12px; text-align: center; padding: 10px; background-color: #000; color: #fff;">
+            ©Carafewerk 2023. We love our users! All Rights Reserved. Design by: <span
+                style="font-family: 'Montserrat', Sans-serif;font-size: 12px;font-weight: 400;">Vint Media</span>
+        </div>
+    </footer>
+
+</body>
+
+</html>

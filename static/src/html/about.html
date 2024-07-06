@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@450&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet"
+        href="https://unpkg.com/bs-brain@2.0.4/components/navbars/navbar-1/assets/css/navbar-1.css" />
+    <link rel="stylesheet" href="./carafewerk.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="icon" href="/carafewerk/static/src/images/cropped-favicon-32x32.png" type="image/x-icon" />
+    <title>About Us | Carafewerk</title>
+    <style>
+        .about-section {
+            padding: 0px 0;
+            height: 80%;
+        }
+
+        .about-section h2 {
+            font-size: 65px;
+            font-weight: 700;
+            margin-bottom: 60px;
+        }
+
+        .about-section p {
+            text-align: left;
+            font-family: 'Raleway', Sans-serif;
+            color: #636363;
+            font-size: 20px;
+            font-weight: 100;
+            line-height: 2em;
+        }
+
+        .about-section .img-fluid {
+            height: 55vh;
+            object-fit: contain;
+            margin-left: 120px;
+            margin-top: -30px;
+        }
+
+        .cards {
+            margin: 0 auto;
+            text-align: center;
+            display: -webkit-flex;
+            display: flex;
+            border-radius: 10px;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-flex-wrap: wrap;
+            flex-wrap: wrap;
+            margin-top: 15px;
+            box-shadow: 20px 20px 20px 20px rgba(0, 0, 0, 0.16), ;
+
+        }
+
+        .card-title {
+            font-family: "Raleway", Sans-serif;
+            font-weight: bolder;
+            font-size: 32px;
+            width: 250px;
+        }
+
+        .card-text {
+            font-family: "Raleway", Sans-serif;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 120px;
+            padding: 0 100px;
+        }
+
+        .team-section {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .team-section h2 {
+            font-family: "Raleway", Sans-serif;
+            margin-bottom: 40px;
+            font-size: 65px;
+            font-weight: 700;
+        }
+
+        .team-section p {
+            font-family: "Raleway", Sans-serif;
+            font-size: 32px;
+            font-weight: 200;
+        }
+
+        .col p {
+            text-align: center;
+            font-family: "Raleway", Sans-serif;
+            font-weight: 200;
+        }
+
+        .col i {
+            height: 15em;
+            font-size: 25px;
+            position: relative;
+            color: gray;
+            margin-top: 5px;
+            padding: 10px;
+        }
+
+        .col .fa-brands:hover {
+            color: orange;
+            font-size: 30px;
+        }
+
+        .work-with-us {
+            text-align: start;
+            width: 65%;
+            margin-left: 245px;
+            margin-top: -105px;
+        }
+
+        .work-with-us h2 {
+            font-family: "Raleway", Sans-serif;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 65px;
+            font-weight: 700;
+        }
+
+        .work-with-us p {
+            font-family: "Raleway", Sans-serif;
+            font-size: 20px;
+            margin-bottom: 20px;
+            font-weight: 400;
+            line-height: 1.8em;
+
+        }
+
+        .work-with-us a {
+
+            color: #e83e8c;
+            text-decoration: none;
+        }
+
+        .work-with-us a:hover {
+            color: #636363;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md bg-black" style="height: 110px">
+            <div class="container" style="margin-left: 25px">
+                <a class="navbar-brand" href="./index.html">
+                    <img src="/carafewerk/static/src/images/logo.png" alt="Logo" width="220" />
+                </a>
+                <div style="margin-right: -190px">
+                    <div class="offcanvas-body" style="overflow: hidden">
+                        <ul class="navbar-nav justify-content-end flex-grow-1">
+                            <li class="nav-item px-2">
+                                <a class="nav-link active text-white" aria-current="page" href="./index.html">Cha.i</a>
+                            </li>
+                            <li class="nav-item px-2">
+                                <a class="nav-link active text-white" aria-current="page"
+                                    href="./essentials.html">Essentials</a>
+                            </li>
+                            <li class="nav-item px-2">
+                                <a class="nav-link active text-white" aria-current="page"
+                                    href="./teastory.html">TeaStorys</a>
+                            </li>
+                            <li class="nav-item px-2">
+                                <a class="nav-link active text-white" aria-current="page" href="./about.html">About
+                                    Us</a>
+                            </li>
+                            <li class="nav-item px-2">
+                                <a class="nav-link active text-white" aria-current="page"
+                                    href="https://www.flickr.com/photos/194494258@N08/">Gallery</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="about-section container mt-5">
+        <div style="margin: 140px 25px 10px -60px;">
+            <div class="row align-items-start">
+                <div class="col-lg-7">
+                    <h2>About</h2>
+                    <p>
+                        At Carafewerk, we want the world to look forward to preparing and
+                        enjoying their daily cups of tea. A conversation about tea with
+                        ten people in India would get you nine different methods on what
+                        constitutes a good cup. The perfect cup is really very personal.
+                    </p>
+                    <p style="margin-top: 50px;">
+                        <strong style="font-weight: bold; color: black; ">Our mission is to make your perfect cup of
+                            tea.</strong>
+                    </p>
+                </div>
+                <div class="col-lg-5 text-center">
+                    <img src="/carafewerk/static/src/images/Tea-Maker-Right-Pers-e1676271043351.png" alt="Tea Machine" class="img-fluid" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <section style="background-color: #F2F2F2;">
+        <div style="display: flex;justify-content: center; text-align: center; padding-top: 75px;">
+            <h1 style="font-size: 65px; font-weight: 700;">Our Design Beliefs</h1>
+        </div>
+        <div style="display: grid;grid-template-columns: repeat(3, 1fr);padding: 50px;">
+            <div class="card cards card-2 "
+                style="width: 395px;  text-align: left;padding:30px;border-radius: 20px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);">
+                <div class="card-body">
+                    <h1 class="card-title">Visual engagement
+                    </h1>
+                    <p class="card-text">
+                        <b>cha.i</b>
+                        takes transparency to a completely new level for a beverage making appliance. Or any appliance
+                        for that matter.
+                    </p>
+                    <p class="card-text">With complete visibility on each step of tea preparation, you are invited to
+                        become a part of the tea making ritual.</p>
+                </div>
+            </div>
+            <div class="card cards card-2 "
+                style="width: 395px;text-align: left;padding:30px;border-radius: 20px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);">
+                <div class="card-body">
+                    <h1 class="card-title">Simple and elegant style
+                    </h1>
+                    <p class="card-text">
+                        Our approach has been to look for fundamental ways to address problems. An example is
+                        <b>cha.i’</b>s milk container. It’s design completely eliminates the use of pipes ensuring no
+                        cleaning challenge. The same milk container can also be removed from the appliance and placed in
+                        a refrigerator when not in use.
+                    </p>
+                    <p class="card-text">With complete visibility on each step of tea preparation, you are invited to
+                        become a part of the tea making ritual.</p>
+                </div>
+            </div>
+            <div class="card cards card-2 "
+                style="width: 395px; text-align: left;padding:30px;border-radius: 20px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);">
+                <div class="card-body">
+                    <h1 class="card-title">Empathy
+                    </h1>
+                    <p class="card-text">
+                        <em><strong>For the environment. </strong></em>
+                        We said no to pods for tea leaves.
+                    </p>
+                    <p class="card-text">
+                        <em><strong>For you. </strong></em>
+                        It is now a child’s play to make that perfect cup of tea. Even I could do it.
+                    </p>
+                    <p class="card-text">
+                        <em><strong>For the service engineer. </strong></em>
+                        It really is effortless to access the internals.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="team-section">
+        <div class="team-container" style="margin-top: 45px;">
+            <h2>Connect with our tea.m</h2>
+            <div class="row" style="text-align: center; padding-left: 20px; padding-right: 20px;margin-left: 25px;">
+                <div class="col">
+                    <p>Chandrashekhar</p>
+                </div>
+                <div class="col">
+                    <p>Shantanu </p>
+                </div>
+                <div class="col">
+                    <p>Vinay</p>
+                </div>
+                <div class="col">
+                    <p>Dheeraj </p>
+                </div>
+            </div>
+            <div class="row"
+                style="text-align: center; padding-left: 20px; padding-right: 20px; margin-top: -25px;margin-left: 25px;">
+                <div class="col">
+                    <p>Wyawahare</p>
+                </div>
+                <div class="col">
+                    <p>Panse </p>
+                </div>
+                <div class="col">
+                    <p>Raizada</p>
+                </div>
+                <div class="col">
+                    <p>Vasishth </p>
+
+                </div>
+            </div>
+            <div class="row" style="text-align: center; padding-left: 20px; padding-right: 20px; margin-left: 25px;">
+                <div class="col">
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <div class="col">
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <div class="col">
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <div class="col">
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="work-with-us">
+                <div class="container">
+                    <h2>Work with us</h2>
+                    <p>If you are mad about chai (or any other beverage, for that matter) and scarily good at your work,
+                        please talk to us. We have openings in industrial design and social marketing. Drop in your
+                        resume at <a href="mailto:chai@carafewerk.com">chai@carafewerk.com</a> with the subject line
+                        “chai paani at cha.i”</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer style="font-family:'Raleway', Sans-serif;background-color: #ffffff;">
+        <section
+            style="display: flex;justify-content: space-between; height: 250px;  align-items: center; background-color: #ffffff;">
+            <div style="font-size: 48px;text-align: start;padding-left: 30px;">
+                Get in touch <b><span style="color: #000;">today!</span></b>
+            </div>
+
+            <div
+                style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start; width: 45%;padding-right: 100px;gap:5px;margin-top: 15px;">
+                <input type="text" placeholder="Name: First Last"
+                    style="margin: 5px ; padding: 5px; width: 100%;  box-sizing: border-box;border: none;border-bottom: 1px solid black;">
+                <input type="text" placeholder="Mobile: +91-XXXXXXXXXX"
+                    style="margin: 5px ; padding: 5px; width: 100%; box-sizing: border-box;border: none;border-bottom: 1px solid black;">
+                <input type="text" placeholder="Your City"
+                    style="margin: 5px ; padding: 5px; width: 100%; box-sizing: border-box;border: none;border-bottom: 1px solid black;">
+                <input type="email" placeholder="yourname@email.com"
+                    style="margin: 5px ; padding: 5px; width: 100%; box-sizing: border-box;border: none;border-bottom: 1px solid black;">
+                <button
+                    style="margin-top: 10px; padding: 8px 70px; background-color:#fcae17; border: 1px solid black; border-radius: 10px; font-size: 15px; font-weight: bold; cursor: pointer; display: flex; justify-content: center; align-items: center; transition: transform 0.3s ease;"
+                    onmouseover="this.style.transform='scale(0.9)';this.style.color='white';"
+                    onmouseout="this.style.transform='scale(1)';this.style.color='black';">
+                    Send <span style="margin-left: 10px;" class="fas fa-coffee"></span>
+                </button>
+            </div>
+        </section>
+
+        <section
+            style="position: relative;background-image: url('/carafewerk/static/src/images/Mask-Group-1.png'); background-size: cover; background-position: bottom center; color: #fff; text-align: center; padding: 106px 140px;margin-top: 30px;height: 100px;">
+            <div
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 1;">
+            </div>
+            <div
+                style="position: relative; z-index: 2; height: 100%; display: flex; align-items: center; justify-content: space-between; padding: 0 20px;">
+                <a href="./essentials.html" style="text-decoration: none;">
+                    <h1 style="font-size: 45px; margin: 20px; color: #ffcc00;">Browse Essentials</h1>
+                </a>
+                <p style="font-size: 20px; margin-right: -60px;">The best tea tastes even better with the best teacups!
+                </p>
+            </div>
+        </section>
+
+        <div
+            style="display: flex; justify-content: space-around; height: 295px; background-color: #000; color: #fff; padding: 40px 30px;">
+            <div style="flex: 1; margin: 0 20px; text-align: center;margin-top: 20px;">
+                <a href="./index.html"><img src="/carafewerk/static/src/images/logo.png" alt="Logo" width="250" height="25"></a>
+            </div>
+            <div style="flex: 1; margin: 0 20px;">
+                <h5 style="font-weight: bolder;">Products</h5>
+                <ul style="list-style: none; padding: 10px 0;">
+                    <li style="margin: 10px 0;"><a href="./index.html"
+                            style="color: #ffcc00; text-decoration: none;">Chai</a>
+                    </li>
+                    <li style="margin: 10px 0;"><a href="./essentials.html"
+                            style="color: #ffcc00; text-decoration: none;">Essentials</a></li>
+                </ul>
+            </div>
+            <div style="flex: 1; margin: 0 20px;">
+                <h5 style="font-weight: bolder;">Company</h5>
+                <ul style="list-style: none; padding: 10px 0;">
+                    <li style="margin: 10px 0;"><a href="./about.html"
+                            style="color: #ffcc00; text-decoration: none;">About Us</a>
+                    </li>
+                    <li style="margin: 10px 0;"><a href="./contact.html"
+                            style="color: #ffcc00; text-decoration: none;">Contact
+                            Us</a></li>
+                </ul>
+            </div>
+            <div style="flex: 1; margin: 0 20px;">
+                <h5 style="font-weight: bolder;">Help</h5>
+                <ul style="list-style: none; padding: 10px 0;">
+                    <li style="margin: 10px 0;"><a href="./return-policy.html"
+                            style="color: #ffcc00; text-decoration: none;">Return Policy</a></li>
+                    <li style="margin: 10px 0;"><a href="./shpipping-policy.html"
+                            style="color: #ffcc00; text-decoration: none;">Shipping Policy</a>
+                    </li>
+                    <li style="margin: 10px 0;"><a href="./payment-terms.html"
+                            style="color: #ffcc00; text-decoration: none;">Payment Terms</a></li>
+                    <li style="margin: 10px 0;"><a href="./terms-and-conditions.html"
+                            style="color: #ffcc00; text-decoration: none;">Terms and
+                            Conditions</a></li>
+                </ul>
+            </div>
+            <div style="flex: 1; margin: 0 20px;">
+                <h5 style="font-weight: bolder;">Follow Us!</h5>
+                <div style="display: flex; gap: 30px; margin-top:40px; margin-left: 20px;">
+                    <a href="https://www.facebook.com/carafewerk/" target="_blank" style="color: #ffcc00; font-size: 24px; text-decoration: none;"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/carafewerk/" target="_blank" style="color: #ffcc00; font-size: 24px; text-decoration: none;"><i
+                        class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div style="font-size: 12px; text-align: center; padding: 10px; background-color: #000; color: #fff;">
+            ©Carafewerk 2023. We love our users! All Rights Reserved. Design by: <span
+                style="font-family: 'Montserrat', Sans-serif;font-size: 12px;font-weight: 400;">Vint Media</span>
+        </div>
+    </footer>
+
+</body>
+
+</html>
